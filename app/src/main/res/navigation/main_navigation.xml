@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/splashScreenFragment">
+    <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="com.bangkit.sapigo.SplashScreenFragment"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash_screen" >
+        <action
+            android:id="@+id/action_splashScreenFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_splashScreenFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.bangkit.sapigo.ui.authentication.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_registrationFragment"
+            app:destination="@id/registrationFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <argument
+            android:name="username"
+            app:argType="string"
+            android:defaultValue="Users" />
+    </fragment>
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.bangkit.sapigo.ui.authentication.RegistrationFragment"
+        android:label="fragment_registration"
+        tools:layout="@layout/fragment_registration" >
+        <action
+            android:id="@+id/action_registrationFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.bangkit.sapigo.ui.navigation.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_cameraActivity"
+            app:destination="@id/cameraActivity" />
+        <action
+            android:id="@+id/action_homeFragment_to_monitoringFragment"
+            app:destination="@id/monitoringFragment" />
+        <argument
+            android:name="username"
+            app:argType="string" />
+    </fragment>
+    <activity
+        android:id="@+id/cameraActivity"
+        android:name="com.bangkit.sapigo.ui.scan.CameraActivity"
+        android:label="CameraActivity" />
+    <fragment
+        android:id="@+id/accountFragment"
+        android:name="com.bangkit.sapigo.ui.navigation.AccountFragment"
+        android:label="fragment_account"
+        tools:layout="@layout/fragment_account" >
+        <action
+            android:id="@+id/action_accountFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_accountFragment_to_monitoringFragment"
+            app:destination="@id/monitoringFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/monitoringFragment"
+        android:name="com.bangkit.sapigo.ui.navigation.MonitoringFragment"
+        android:label="fragment_monitoring"
+        tools:layout="@layout/fragment_monitoring" >
+        <action
+            android:id="@+id/action_monitoringFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <activity
+        android:id="@+id/resultActivity"
+        android:name="com.bangkit.sapigo.ui.scan.ResultActivity"
+        android:label="activity_result"
+        tools:layout="@layout/activity_result" />
+
+
+</navigation>

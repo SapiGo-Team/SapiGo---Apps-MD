@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "493686961699",
+    "project_id": "capstoneproject-sapigo-387812",
+    "storage_bucket": "capstoneproject-sapigo-387812.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:493686961699:android:eec9c0d83a16bb9980e396",
+        "android_client_info": {
+          "package_name": "com.bangkit.sapigo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBpaOzpdXeNZ9ynOJTO2P3yJeNMm6Ylq7M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
