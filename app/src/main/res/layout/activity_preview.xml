@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.scan.PreviewActivity">
+
+
+<!--    <ImageView-->
+<!--        android:id="@+id/img_1"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="500dp"-->
+<!--        android:contentDescription="The Uploaded Photo"-->
+<!--        android:scaleType="fitCenter"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        tools:srcCompat="@tools:sample/avatars" />-->
+
+    <TextView
+        app:layout_constraintTop_toBottomOf="@id/recycler_view"
+        android:text="Confirm this photo?"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:id="@+id/tv_confirmation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:backgroundTint="@color/md_theme_light_primary"
+            android:layout_margin="15dp"
+            android:src="@drawable/baseline_arrow_back_24"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"/>
+        <ImageButton
+
+            android:id="@+id/btn_confirm"
+            android:backgroundTint="@color/md_theme_light_primary"
+            android:layout_gravity="center"
+            android:layout_marginLeft="150dp"
+            android:src="@drawable/baseline_check_24"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:padding="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/recycler_view"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_confirmation"
+        android:layout_width="409dp"
+        android:layout_height="500dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="41dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
