@@ -56,6 +56,7 @@ class RegistrationFragment : BaseFragment() {
             val email = binding.edEmail.text.toString()
             val password = binding.edPassword.text.toString()
             createAccount(username,email, password)
+            findNavController().navigate(R.id.action_registrationFragment_to_loginFragment)
         }
         setProgressBar(binding.progressBar)
     }
